@@ -1,0 +1,112 @@
+﻿@page "/learnBlazor/BindProp"
+@using Tangy_Models.BlazorModels
+<h3 class="text-success">Bind Prop</h3>
+<hr />
+<div class="row">
+    <div class="col">
+        <h2 class="text-primary">This is the example of one way data binding.</h2>
+        <div class="border p-3">
+            Id:@obj.Id<br />
+            Name: @obj.Name<br />
+            IsActive: @obj.IsActive<br />
+            <br />
+            Selected Category is: @categoryName
+            <br />
+        </div>
+    </div>
+    <div class="col">
+        <h2 class="text-primary">Example of two way binding</h2>
+        <div class="border p-3">
+            Name:
+            <input type="text" @bind="@obj.Name" @bind:event="oninput" />
+            <br />
+            <br />
+            This product is : @(obj.IsActive?"Active":"InActive")
+            <br />
+            Active:
+            <input type="checkbox" @bind-value="@obj.IsActive" checked="@(obj.IsActive?"checked":null)" />
+            <br />
+            <select @bind="categoryName">
+                @foreach (var cat in obj.Categories)
+                {
+                    <option value="@cat.CategoryName">@cat.CategoryName</option>
+                }
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <h2 class="text-success">Product Table</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Category Name</th>
+            <th>IsActive</th>
+        </tr>
+        @foreach (var item in demoProducts)
+        {
+            <tr>
+                <td>
+                    <input type="text" @bind-value="@item.Name" @bind-value:event="oninput" />
+                </td>
+                <td>
+                    <select @bind="categoryName">
+                        @foreach (var cat in item.Categories)
+                        {
+                            <option value="@cat.CategoryName">@cat.CategoryName</option>
+                        }
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" @bind-value="@item.IsActive" checked="@(item.IsActive?"checked":null)" />
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
+
+@code {
+    string categoryName = "";
+    DemoProducts obj = new()
+        {
+            Id = 1,
+            Name = "Pratap Singh",
+            IsActive = true,
+            IsDelete = false,
+            Categories = new List<Categories>()
+        {
+            new Categories{CategoryName="Books"},
+            new Categories{CategoryName="Pen"},
+            new Categories{CategoryName="Laptop"},
+            new Categories{CategoryName="Keyboard"}
+        }
+        };
+
+    List<DemoProducts> demoProducts = new();
+    protected override void OnInitialized()
+    {
+        demoProducts.Add(new()
+            {
+                Id = 1,
+                Name = "Chair",
+                IsActive = false,
+                Categories = new()
+            {
+                new Categories{CategoryName="Home Decor"},
+                new Categories{CategoryName="Furniture"}
+            }
+            });
+        demoProducts.Add(new()
+            {
+                Id = 1,
+                Name = "Fan",
+                IsActive = false,
+                Categories = new()
+            {
+                new Categories{CategoryName="Home Decor"}
+            }
+            });
+    }
+
+}

@@ -1,0 +1,26 @@
+﻿<div>
+    <h4 class="text-success">Another Child Component</h4>
+   @* <input type="text" placeholder="@Placeholder" required=@Required maxlength="@MaxLength"/>*@
+   <input type="text" @attributes="@InputAttributes" />
+</div>
+
+
+
+@code {
+    //[Parameter]
+    //public string Placeholder{ get; set; }
+    //[Parameter]
+    //public string Required { get; set; } = "Required";
+
+    //[Parameter]
+    //public string MaxLength { get; set; } = "10";
+
+    [Parameter]
+    public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>()
+    {
+        {"Placeholder", "Enter your name"},
+        {"Required", "Required"},
+        {"MaxLength", 10}
+    };
+
+}

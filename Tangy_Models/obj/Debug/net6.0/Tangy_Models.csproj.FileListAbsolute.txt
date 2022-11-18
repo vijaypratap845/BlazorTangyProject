@@ -1,0 +1,12 @@
+D:\VijayPracticeProjects\Tangy_Models\bin\Debug\net6.0\Tangy_Models.deps.json
+D:\VijayPracticeProjects\Tangy_Models\bin\Debug\net6.0\Tangy_Models.dll
+D:\VijayPracticeProjects\Tangy_Models\bin\Debug\net6.0\Tangy_Models.pdb
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\Tangy_Models.csproj.AssemblyReference.cache
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\Tangy_Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\Tangy_Models.AssemblyInfoInputs.cache
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\Tangy_Models.AssemblyInfo.cs
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\Tangy_Models.csproj.CoreCompileInputs.cache
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\Tangy_Models.dll
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\refint\Tangy_Models.dll
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\Tangy_Models.pdb
+D:\VijayPracticeProjects\Tangy_Models\obj\Debug\net6.0\ref\Tangy_Models.dll

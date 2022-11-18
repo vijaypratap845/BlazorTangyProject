@@ -1,0 +1,39 @@
+﻿@using Tangy_Models.BlazorModels
+ 
+<div class="col border p-3 m-3" @onclick="(args)=>ProdSelected(args, products.Name)">
+           <p class="text-success">Add to cart:<input type="checkbox" @onchange="AddToCart"/><br /></p>
+            <b>Id</b>: @products.Id<br>
+            <b>Name</b> @products.Name<br>
+            <b>Category Name:</b>
+
+            <select>
+                @foreach (var item2 in @products.Categories)
+                {
+                    <option value="@item2.CategoryName">@item2.CategoryName</option>
+                }
+            </select>
+
+            <br>
+            <b>IsActive</b>: <input type="checkbox" @bind-value="@products.IsActive" checked="@(products.IsActive?"checked":null)" /><br>
+            <_EditDeleteComponent IsActive="@products.IsActive">
+            </_EditDeleteComponent>
+        </div>
+
+@code {
+    [Parameter]
+    public DemoProducts products{ get; set; }
+    [Parameter]
+    public EventCallback<bool> OnAddToCart{ get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnProdSelected{ get; set; }
+    private async Task AddToCart(ChangeEventArgs args)
+    {
+        await OnAddToCart.InvokeAsync((bool)args.Value);
+    }
+    private async Task ProdSelected(MouseEventArgs args, string product)
+    {
+        await OnProdSelected.InvokeAsync(product);
+    }
+
+}

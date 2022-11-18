@@ -1,0 +1,90 @@
+﻿@page "/product"
+@using Tangy_Business.Repository.IRepository
+@using Tangy_Models
+@inject IProductRepo iproductRepo
+@inject IJSRuntime _jsRuntime
+<h3>Product List</h3>
+
+<div class="row">
+    <div class="col-4 offset-8">
+        <a href="product/create" class="btn btn-primary">Add New Product</a>
+    </div>
+</div>
+<div class="row m-3">
+    <div class="col">
+        @if (Product.Any())
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                         <th>ShopFavourites</th>
+                        <th>CustomerFavourites</th>
+                        <th>CategoryId</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in @Product)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>
+                                <input type="checkbox" disabled checked="@item.ShopFavourites">
+                            </td>
+                            <td>@item.ShopFavourites</td>
+                            <td>@item.CustomerFavourites</td>
+                            <td>@item.CategoryId</td>
+                            
+                            <td>
+                                <NavLink class="btn btn-primary" href="@($"product/edit/{item.Id}")">Edit</NavLink>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" @onclick="()=>HandleDelete(item.Id)">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            if (IsLoading)
+            {
+                <div class="text-center">
+                    <img src="/Images/loading.gif" alt="loading">
+                </div>
+            }
+            else
+            {
+                <p>No Records Found!</p>
+            }
+        }
+
+    </div>
+
+</div>
+
+
+
+@code {
+
+    private IEnumerable<ProductDTO> Product { get; set; } = new List<ProductDTO>();
+    public bool IsLoading { get; set; } = true;
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Run(LoadCategories);
+    }
+    private void LoadCategories()
+    {
+        Product = iproductRepo.GetAll();
+        IsLoading = false;
+    }
+    private int deleteConfirmId { get; set; } = 0;
+    private void HandleDelete(int id)
+    {
+        deleteConfirmId = id;
+        _jsRuntime.InvokeVoidAsync("ShowDeleteConfirmationModal");
+    }
+}

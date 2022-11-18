@@ -1,0 +1,25 @@
+﻿@page "/learnBlazor/parentChildRelation"
+@using TangyWeb_Server.Pages.LearnBlazor.SharedComponents
+<h3>Parent-Child Relation</h3>
+<_ChildComponent OnButtonClick="ShowMessage" title="This title is passed from child to parent component">
+    <ChildContent>This text is from render fragment.</ChildContent>
+    <DangerChildContent>This is second child component</DangerChildContent>
+    
+</_ChildComponent>
+<div>@msg</div>
+<_AnotherChildComponent InputAttributes="InputAttributesFromParent"></_AnotherChildComponent>
+
+@code {
+    public string msg = "";
+    private void ShowMessage()
+    {
+        msg = "Button has clicked!";
+    }
+     public Dictionary<string, object> InputAttributesFromParent { get; set; } = new Dictionary<string, object>()
+    {
+        {"Placeholder", "Enter your name"},
+        {"Required", "Required"},
+        {"MaxLength", 10}
+    };
+
+}

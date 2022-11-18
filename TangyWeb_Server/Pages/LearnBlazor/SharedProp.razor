@@ -1,0 +1,62 @@
+﻿@page "/learnBlazor/sharedprop"
+@using Tangy_Models.BlazorModels
+@using TangyWeb_Server.Pages.LearnBlazor.SharedComponents
+<h3>Shared Prop</h3>
+<p>Total Items in Cart: @CartItemCounter</p><br />
+<p>Last Product Selected: @SelectedDiv</p>
+<div class="row border-1">
+    @foreach (var item in demoProducts)
+    {
+   
+        <_SharedPropComponent products="item" OnAddToCart="cartCount" OnProdSelected ="productSelected"></_SharedPropComponent>
+    }
+
+</div>
+
+
+@code {
+    public int CartItemCounter { get; set; } = 0;
+    public string SelectedDiv{ get; set; }
+
+    List<DemoProducts> demoProducts = new();
+    protected override void OnInitialized()
+    {
+        demoProducts.Add(new()
+            {
+                Id = 1,
+                Name = "Chair",
+                IsActive = false,
+                Categories = new()
+            {
+                new Categories{CategoryName="Home Decor"},
+                new Categories{CategoryName="Furniture"}
+            }
+            });
+        demoProducts.Add(new()
+            {
+                Id = 2,
+                Name = "Fan",
+                IsActive = true,
+                Categories = new()
+            {
+                new Categories{CategoryName="Home Decor"},
+                new Categories{CategoryName="Furniture"}
+            }
+            });
+    }
+    protected void cartCount(bool isSelected)
+    {
+        if (isSelected)
+            CartItemCounter++;
+        else
+            CartItemCounter--;
+    }
+    protected void productSelected(string prodSelected)
+    {
+        if (prodSelected != null)
+            SelectedDiv = prodSelected;
+        else
+            SelectedDiv = "";
+    }
+
+}

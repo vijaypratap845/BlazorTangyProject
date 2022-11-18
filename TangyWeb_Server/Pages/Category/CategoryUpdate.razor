@@ -1,0 +1,84 @@
+﻿@page "/category/create"
+@page "/category/edit/{id:int}"
+
+@using Tangy_Business.Repository.IRepository
+@using Tangy_Models
+@inject ICategoryRepo icategoryRepo
+@inject NavigationManager _navigationManager
+
+<h3>@Title Category</h3>
+<div class="row">
+    <div class="col">
+        @if (IsLoading)
+        {
+             <div class="text-center">
+                    <img src="/Images/loading.gif" alt="loading">
+                </div>
+        }
+        else
+        {
+            <EditForm Model="@category" OnValidSubmit="UpsertCategory">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <InputText class="form-control" id="name" @bind-Value="category.Name" />
+    </div>
+    <br />
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <NavLink href = "category" class="btn btn-secondary">Cancel</NavLink>
+    </div>
+    
+</EditForm>
+        }
+        
+</div>
+</div>
+
+
+@code {
+    [Parameter]
+    public int Id{ get; set; }
+
+
+    private CategoryDTO category { get; set; } = new CategoryDTO();
+    public string Title { get; set; } = "Create";
+    public bool IsLoading { get; set; } 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            if (Id == 0)
+            {
+                IsLoading = false;
+            }
+            else
+            {
+                Title = "Update";
+                LoadCatgeory();
+            }
+        }
+
+
+    }
+    private void LoadCatgeory()
+    {
+        category = icategoryRepo.Get(Id);
+        IsLoading = false;
+        StateHasChanged();
+    }
+    private void UpsertCategory()
+    {
+        if (Id == 0)
+        {
+            icategoryRepo.Create(category);
+
+        }
+        else
+        {
+            icategoryRepo.Update(category);
+        }
+        _navigationManager.NavigateTo("category"); 
+    }
+}
+

@@ -1,0 +1,109 @@
+﻿@page "/product/create"
+@page "/product/edit/{id:int}"
+@using Tangy_Business.Repository.IRepository
+@using Tangy_Models
+@inject IProductRepo iproductRepo
+@inject ICategoryRepo icategoryRepo
+@inject NavigationManager _navigationManager
+<h3>@Title Product </h3>
+<div class="row">
+    <div class="col">
+        @if (IsLoading)
+        {
+            <div class="text-center">
+                <img src="/Images/loading.gif" alt="loading">
+            </div>
+        }
+        else
+        {
+            <EditForm Model="@product" OnValidSubmit="UpsertProduct">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="form-group">
+                    <label for="name">
+                        Name:
+                    </label>
+                    <InputText class="form-control" id="name" @bind-Value="product.Name" />
+                </div>
+
+                <br />
+                <div class="form-group">
+                     <label for="description">
+                        Description:
+                    </label>
+                    <InputText class="form-control" id="description" @bind-Value="product.Description" />
+                </div>
+                <br />
+                <div class="form-group">
+                     <label for="color">
+                        Color:
+                    </label>
+                    <InputText class="form-control" id="color" @bind-Value="product.Color" />
+                </div>
+                <br />
+                 <div class="form-group">
+                    <InputSelect @bind-Value="Category.Id">  
+                    <option value="">-- Select Category --</option>  
+                     <option value="1">Name</option>  
+                    </InputSelect>  
+                </div>
+                <br />
+
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <NavLink href="product" class="btn btn-secondary">Cancel</NavLink>
+                </div>
+
+            </EditForm>
+        }
+
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    public ProductDTO product { get; set; } = new ProductDTO();
+    private CategoryDTO Category { get; set; } = new CategoryDTO();
+    public string Title { get; set; } = "Create";
+    public bool IsLoading { get; set; } = true;
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id == 0)
+        {
+            IsLoading = false;
+            //await Task.Run(LoadCategory);
+        }
+        else
+        {
+            Title = "Update";
+            await Task.Run(LoadProducts);
+        }
+
+    }
+    private void LoadProducts()
+    {
+        product = iproductRepo.Get(Id);
+        IsLoading = false;
+    }
+    //private void LoadCategory()
+    //{
+    //    Category = icategoryRepo.GetAll();
+    //    IsLoading = false;
+    //}
+    public void UpsertProduct()
+    {
+        if (Id == 0)
+        {
+            iproductRepo.Create(product);
+
+        }
+        else
+        {
+            iproductRepo.Update(product);
+        }
+        _navigationManager.NavigateTo("product");
+    }
+
+}

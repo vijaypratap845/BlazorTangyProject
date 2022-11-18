@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "1K1a7iQGl9tPJGv2AkDw9L7w/G3vQu2ld8zdkD/Hqhh97+VvK2fYESSeLTgZIA6T6dHlmlE0/q/ZyKueZ4r50w==",
+  "success": true,
+  "projectFilePath": "D:\\TangyProjectNew\\TangyWeb_API\\TangyWeb_API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VSINGH\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\VSINGH\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\VSINGH\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\VSINGH\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\VSINGH\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\VSINGH\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

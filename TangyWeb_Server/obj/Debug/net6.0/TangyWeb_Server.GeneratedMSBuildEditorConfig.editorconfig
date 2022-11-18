@@ -1,0 +1,120 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TangyWeb_Server
+build_property.RootNamespace = TangyWeb_Server
+build_property.ProjectDir = D:\TangyProjectNew\TangyWeb_Server\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\TangyProjectNew\TangyWeb_Server
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/TangyProjectNew/TangyWeb_Server/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/Category/CategoryList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcQ2F0ZWdvcnlMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/Category/CategoryUpdate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcQ2F0ZWdvcnlVcGRhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/BindProp.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcQmluZFByb3AucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/LearnRouting.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcTGVhcm5Sb3V0aW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/Parent-ChildRelation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcUGFyZW50LUNoaWxkUmVsYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/SharedComponents/_AnotherChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcU2hhcmVkQ29tcG9uZW50c1xfQW5vdGhlckNoaWxkQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/SharedComponents/_ChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcU2hhcmVkQ29tcG9uZW50c1xfQ2hpbGRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/SharedComponents/_EditDeleteComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcU2hhcmVkQ29tcG9uZW50c1xfRWRpdERlbGV0ZUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/SharedComponents/_LifeCycleChild.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcU2hhcmVkQ29tcG9uZW50c1xfTGlmZUN5Y2xlQ2hpbGQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/SharedComponents/_SharedPropComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcU2hhcmVkQ29tcG9uZW50c1xfU2hhcmVkUHJvcENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LearnBlazor/SharedProp.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhcm5CbGF6b3JcU2hhcmVkUHJvcC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/LifeCycle.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlmZUN5Y2xlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/Product/ProductList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/Product/ProductUpdate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0VXBkYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Shared/_DeleteConfirmation.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXF9EZWxldGVDb25maXJtYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ya55pvsvj8
+
+[D:/TangyProjectNew/TangyWeb_Server/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gqvlsnn27w
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TangyProjectNew/TangyWeb_Server/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

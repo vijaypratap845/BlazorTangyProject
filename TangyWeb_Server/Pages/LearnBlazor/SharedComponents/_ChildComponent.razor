@@ -1,0 +1,40 @@
+﻿
+<p class="alert alert-info">@title</p>
+<div class="alert alert-danger">
+    @if (DangerChildContent != null)
+    {
+        <span>
+            @DangerChildContent
+        </span>
+    }
+    @if (ChildContent != null)
+    {
+        <span>
+            @ChildContent
+        </span>
+    }
+    else
+    {
+        <span>Empty render fragment</span>
+    }
+
+  
+</div>
+<div>
+      <button class="btn btn-primary m-3" @onclick="OnButtonClick"><b>Click Here </b>to change text</button>
+</div>
+@code {
+    [Parameter]
+    public string title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public RenderFragment DangerChildContent{ get; set; }
+
+    [Parameter]
+    public EventCallback OnButtonClick{ get; set; }
+
+
+}
